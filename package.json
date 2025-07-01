@@ -1,0 +1,10 @@
+{
+  "name": "sheet-to-web",
+  "version": "1.0.0",
+  "description": "Google Sheet to Webpage",
+  "scripts": {
+    "start": "echo 'No start script'"
+  },
+  "author": "",
+  "license": "ISC"
+}

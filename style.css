@@ -1,0 +1,148 @@
+/* 기본적인 폰트와 배경색 설정 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 콘텐츠를 감싸고 가운데 정렬 */
+.container {
+    max-width: 800px; /* 문서처럼 보이도록 너비를 약간 줄입니다. */
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- 문서 스타일 --- */
+#doc-container {
+    line-height: 1.8; /* 줄 간격을 넓혀 가독성을 높입니다. */
+}
+
+/* 문서의 최상단 메인 제목 */
+.main-title {
+    font-size: 1.8em; /* 수정 */
+    font-weight: bold;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* 문서의 부제목 */
+.sub-title {
+    font-size: 1.0em; /* 수정 */
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 20px;
+}
+
+/* 각 내용 블록 */
+.doc-block {
+    margin-bottom: 35px;
+}
+
+/* 내용의 소제목 (A열 굵은 글씨) */
+.doc-title {
+    font-size: 1.4em; /* 수정 */
+    font-weight: 600;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+/* 내용 텍스트 (B열) */
+.doc-content {
+    margin: 0;
+    padding-left: 5px; /* 약간의 들여쓰기 효과 */
+    color: #34495e;
+    white-space: pre-wrap; /* 시트의 줄바꿈을 그대로 유지합니다. */
+}
+
+/* --- 테이블 스타일 --- */
+.doc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9em; /* 테이블 내 글씨 크기 조정 */
+}
+
+.doc-table th, .doc-table td {
+    border: 1px solid #dfe6e9;
+    padding: 12px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap; /* 테이블 내용이 줄바꿈되지 않도록 하여 가로 스크롤이 잘 되게 함 */
+}
+
+.doc-table th {
+    background-color: #f7f9fa;
+    font-weight: 600;
+}
+
+/* --- 테이블 스크롤을 위한 래퍼 --- */
+.table-wrapper {
+    overflow-x: auto; /* 내용이 넘칠 경우 가로 스크롤 생성 */
+    width: 100%;
+    -webkit-overflow-scrolling: touch; /* 모바일에서 부드러운 스크롤 효과 */
+    border: 1px solid #dfe6e9;
+    border-radius: 4px;
+}
+
+
+/* 링크 스타일 */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 로딩 애니메이션 */
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- 모바일 반응형 스타일 --- */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .main-title {
+        font-size: 1.6em; /* 수정 */
+    }
+
+    .sub-title {
+        font-size: 0.9em; /* 수정 */
+    }
+
+    .doc-title {
+        font-size: 1.2em; /* 수정 */
+    }
+
+    .doc-table {
+        font-size: 0.85em; /* 모바일에서 테이블 글씨 약간 더 줄임 */
+    }
+}
