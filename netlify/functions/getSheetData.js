@@ -14,6 +14,8 @@ exports.handler = async function (event, context) {
 
   // 캐시가 유효한지 확인 (1분 이내인지)
   if (cache.data && (now - cache.timestamp) < CACHE_DURATION_SECONDS * 1000) {
+    // --- 확인용 로그 추가 ---
+    console.log("Serving from cache..."); 
     // 캐시가 유효하면, 구글에 요청하지 않고 저장된 데이터를 즉시 반환
     return {
       statusCode: 200,
@@ -22,6 +24,8 @@ exports.handler = async function (event, context) {
   }
 
   // --- 캐시가 없거나 만료된 경우, 아래 코드가 실행됩니다 ---
+  // --- 확인용 로그 추가 ---
+  console.log("Cache expired or empty. Fetching new data from Google Sheets...");
 
   const API_KEY = process.env.API_KEY;
   const SPREADSHEET_ID = process.env.SHEET_ID;
