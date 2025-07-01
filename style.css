@@ -5,11 +5,12 @@ body {
     color: #333;
     margin: 0;
     padding: 20px;
+    font-size: 17px; /* --- 수정: 기본 글자 크기를 키웠습니다 --- */
 }
 
 /* 콘텐츠를 감싸고 가운데 정렬 */
 .container {
-    max-width: 800px; /* 문서처럼 보이도록 너비를 약간 줄입니다. */
+    max-width: 800px;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 40px;
@@ -19,12 +20,12 @@ body {
 
 /* --- 문서 스타일 --- */
 #doc-container {
-    line-height: 1.8; /* 줄 간격을 넓혀 가독성을 높입니다. */
+    line-height: 1.8;
 }
 
 /* 문서의 최상단 메인 제목 */
 .main-title {
-    font-size: 1.8em; /* 수정 */
+    font-size: 2.0em; /* 수정 */
     font-weight: bold;
     text-align: center;
     color: #2c3e50;
@@ -33,7 +34,7 @@ body {
 
 /* 문서의 부제목 */
 .sub-title {
-    font-size: 1.0em; /* 수정 */
+    font-size: 1.1em; /* 수정 */
     text-align: center;
     color: #7f8c8d;
     margin-bottom: 40px;
@@ -48,7 +49,7 @@ body {
 
 /* 내용의 소제목 (A열 굵은 글씨) */
 .doc-title {
-    font-size: 1.4em; /* 수정 */
+    font-size: 1.5em; /* 수정 */
     font-weight: 600;
     color: #2980b9;
     margin-bottom: 15px;
@@ -57,9 +58,9 @@ body {
 /* 내용 텍스트 (B열) */
 .doc-content {
     margin: 0;
-    padding-left: 5px; /* 약간의 들여쓰기 효과 */
+    padding-left: 5px;
     color: #34495e;
-    white-space: pre-wrap; /* 시트의 줄바꿈을 그대로 유지합니다. */
+    white-space: pre-wrap;
 }
 
 /* --- 테이블 스타일 --- */
@@ -67,7 +68,7 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
-    font-size: 0.9em; /* 테이블 내 글씨 크기 조정 */
+    font-size: 0.95em; /* 수정 */
 }
 
 .doc-table th, .doc-table td {
@@ -75,7 +76,7 @@ body {
     padding: 12px;
     text-align: left;
     vertical-align: middle;
-    white-space: nowrap; /* 테이블 내용이 줄바꿈되지 않도록 하여 가로 스크롤이 잘 되게 함 */
+    white-space: nowrap;
 }
 
 .doc-table th {
@@ -85,9 +86,9 @@ body {
 
 /* --- 테이블 스크롤을 위한 래퍼 --- */
 .table-wrapper {
-    overflow-x: auto; /* 내용이 넘칠 경우 가로 스크롤 생성 */
+    overflow-x: auto;
     width: 100%;
-    -webkit-overflow-scrolling: touch; /* 모바일에서 부드러운 스크롤 효과 */
+    -webkit-overflow-scrolling: touch;
     border: 1px solid #dfe6e9;
     border-radius: 4px;
 }
@@ -98,6 +99,7 @@ a {
     color: #3498db;
     text-decoration: none;
     font-weight: 500;
+    word-break: break-all; /* --- 추가: 긴 링크가 화면을 넘어가지 않도록 줄바꿈 처리 --- */
 }
 
 a:hover {
@@ -123,26 +125,27 @@ a:hover {
 /* --- 모바일 반응형 스타일 --- */
 @media (max-width: 768px) {
     body {
-        padding: 5px;
+        padding: 10px; /* 수정 */
+        font-size: 16px; /* 수정 */
     }
 
     .container {
-        padding: 15px;
+        padding: 20px; /* 수정 */
     }
 
     .main-title {
-        font-size: 1.6em; /* 수정 */
+        font-size: 1.8em;
     }
 
     .sub-title {
-        font-size: 0.9em; /* 수정 */
+        font-size: 1.0em;
     }
 
     .doc-title {
-        font-size: 1.2em; /* 수정 */
+        font-size: 1.4em;
     }
 
     .doc-table {
-        font-size: 0.85em; /* 모바일에서 테이블 글씨 약간 더 줄임 */
+        font-size: 0.9em; /* 수정 */
     }
 }
